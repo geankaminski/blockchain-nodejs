@@ -74,6 +74,10 @@ class P2pServer {
     broadcastTransaction(transaction) {
         this.sockets.forEach(socket => this.sendTransaction(socket, transaction));
     }
+
+    broadcastChain() {
+        this.sockets.forEach(socket => this.sendChain(socket));
+    }
 }
 
 module.exports = P2pServer;

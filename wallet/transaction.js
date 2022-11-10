@@ -56,6 +56,12 @@ class Transaction {
             ChainUtil.hash(transaction.outputs)
         );
     }
+
+    /* static rewardTransaction(minerWallet) {
+        return new this({
+            outputs: [{ amount: MINING_REWARD, address: minerWallet.publicKey }]
+        });
+    } */
 }
 
 module.exports = Transaction;
